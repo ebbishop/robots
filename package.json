@@ -1,0 +1,26 @@
+{
+  "name": "roborally",
+  "version": "0.1.0",
+  "description": "Web-based board game of destruction",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e html,css,js index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebbishop/robots.git"
+  },
+  "author": "ebbishop, pdpatel, jshin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebbishop/robots/issues"
+  },
+  "homepage": "https://github.com/ebbishop/robots#readme",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1",
+    "sequelize": "^3.19.3"
+  }
+}
