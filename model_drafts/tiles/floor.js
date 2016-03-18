@@ -2,8 +2,8 @@ var Sequelize = require('sequelize');
 
 function Floor (db) {
   var Floor = db.define('Floor', {
-    type: Sequelize.TEXT,
-    reference: Sequelize.UUID
+    type: Sequelize.TEXT, //belt, gear, wrench
+    reference: Sequelize.UUID //particular one of type
   });
   return Floor;
 }
@@ -13,8 +13,8 @@ function Floor (db) {
 
 function ConveyorBelt(db){
   var ConveyorBelt = db.define('ConveyorBelt', {
-    exitto: Sequelize.TEXT,  //n,s,e,w
-    enterfrom: Sequelize.ARRAY(Sequelize.TEXT), //array of one or two letters
+    exitto: Sequelize.INTEGER,  //0 - 270
+    enterfrom: Sequelize.ARRAY(Sequelize.INTEGER), //array of 1- numbers, 0-270
     magnitude: Sequelize.INTEGER, //1,2
   });
   return ConveyorBelt;
@@ -22,7 +22,7 @@ function ConveyorBelt(db){
 
 function Gear(db){
   var Gear = db.define('Gear', {
-    direction: Sequelize.TEXT //clockwise or counterclockwise
+    direction: Sequelize.INTEGER //clockwise = +1 or counterclockwise = -1
   });
   return Gear;
 }

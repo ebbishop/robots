@@ -2,8 +2,8 @@ var Sequelize = require('sequelize');
 
 function Edge(db){
   var Edge = db.define('Edge', {
-    type: Sequelize.STRING,
-    reference: Sequelize.UUID
+    type: Sequelize.STRING, //pusher or wall
+    reference: Sequelize.UUID //particular pusher or wall
   });
   return Edge;
 }

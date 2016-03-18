@@ -2,10 +2,10 @@ var Sequelize = require('sequelize');
 
 function Tile(db){
   var Tile = db.define('Tile', {
-    edgeN: Sequelize.UUID,
-    edgeE: Sequelize.UUID,
-    edgeS: Sequelize.UUID,
-    edgeW: Sequelize.UUID,
+    edge000: Sequelize.UUID,
+    edge090: Sequelize.UUID,
+    edge180: Sequelize.UUID,
+    edge270: Sequelize.UUID,
     // edges: Sequelize.ARRAY(Sequelize.UUID), array of 0-3, alternative to separate NESW
     floor: Sequelize.UUID, //null if it is a pit? what if it is just plain cement?
     extra: Sequelize.ARRAY(Sequelize.UUID)
