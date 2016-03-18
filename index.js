@@ -2,8 +2,7 @@ var express = require('express');
 var app = express();
 var Sequelize = require('sequelize');
 var pg = require('pg');
-// var pgp = require('pg-promise')();
-// var testDB = pgp('postgres://postgres:1234@localhost:5432/testDB');
+
 var testDB = new Sequelize('postgres://postgres:1234@localhost:5432/testDB', {});
 testDB.authenticate()
 .then(function(){
