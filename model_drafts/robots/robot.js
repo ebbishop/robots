@@ -11,7 +11,7 @@ function Robot (db) {
     active: Sequelize.BOOLEAN, //defaults to true, false if powered down
     direction: Sequelize.INTEGER, //direction currently facing
 
-
+    // not sure if these really belong here
     prePlayCards: Sequelize.ARRAY(Sequelize.UUID), //array of cards available to be played prior to a turn
     registeredCard: Sequelize.ARRAY(Sequelize.UUID), //array of cards chosen
     ready: Sequelize.BOOLEAN, //toggled to on when ready for next turn
