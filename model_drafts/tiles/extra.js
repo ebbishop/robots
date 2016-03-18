@@ -23,3 +23,9 @@ function Flag(db){
   });
   return Flag;
 }
+
+module.exports = {
+  Extra: Extra,
+  Laser: Laser,
+  Flag: Flag
+};

@@ -33,3 +33,10 @@ function Wrench(db){
   });
   return Wrench;
 }
+
+module.exports = {
+  Floor: Floor,
+  ConveyorBelt: ConveyorBelt,
+  Gear: Gear,
+  Wrench: Wrench
+};

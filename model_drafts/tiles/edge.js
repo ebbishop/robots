@@ -21,3 +21,9 @@ function Wall(db){
   })
   return Wall;
 }
+
+module.exports = {
+  Edge: Edge,
+  Pusher: Pusher,
+  Wall: Wall
+};
