@@ -2,27 +2,34 @@ var Sequelize = require('sequelize');
 
 function Floor (db) {
   var Floor = db.define('Floor', {
-    type: Sequelize.TEXT;
+    type: Sequelize.TEXT,
+    reference: Sequelize.UUID
   });
+  return Floor;
 }
+
+// how do we deal with pits? they are a yes/no kind of thing and override everything else.
 
 
 function ConveyorBelt(db){
   var ConveyorBelt = db.define('ConveyorBelt', {
     exitto: Sequelize.TEXT,  //n,s,e,w
+    enterfrom: Sequelize.ARRAY(Sequelize.TEXT), //array of one or two letters
     magnitude: Sequelize.INTEGER, //1,2
-    inputs: Sequelize.INTEGER, //1,2
-    turns: Sequelize.INTEGER
   });
+  return ConveyorBelt;
 }
 
-function TurnBelt(db){
-  var TurnBelt = db.define('TurnBelt', {
-    direction: Sequelize.TEXT, //up, down
-    rotation: Sequelize.TEXT, //clock, counterclock
-    magnitude: Sequelize.INTEGER
+function Gear(db){
+  var Gear = db.define('Gear', {
+    direction: Sequelize.TEXT //clockwise or counterclockwise
   });
+  return Gear;
 }
 
-
-function
+function Wrench(db){
+  var Wrench = db.define('Wrench', {
+    count: Sequelize.INTEGER //1 or 2
+  });
+  return Wrench;
+}
