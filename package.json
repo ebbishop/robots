@@ -21,6 +21,8 @@
     "bluebird": "^3.3.4",
     "express": "^4.13.4",
     "nodemon": "^1.9.1",
+    "pg": "^4.5.1",
+    "pg-promise": "^3.3.0",
     "sequelize": "^3.19.3"
   }
 }

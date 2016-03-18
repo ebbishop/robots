@@ -2,15 +2,17 @@ var Sequelize = require('sequelize');
 
 function Floor (db) {
   var Floor = db.define('Floor', {
-    type: Sequelize.UUID
+    type: Sequelize.TEXT;
   });
 }
 
 
 function ConveyorBelt(db){
   var ConveyorBelt = db.define('ConveyorBelt', {
-    direction: Sequelize.TEXT,  //n,s,e,w
-    magnitude: Sequelize.INTEGER
+    exitto: Sequelize.TEXT,  //n,s,e,w
+    magnitude: Sequelize.INTEGER, //1,2
+    inputs: Sequelize.INTEGER, //1,2
+    turns: Sequelize.INTEGER
   });
 }
 
@@ -22,3 +24,5 @@ function TurnBelt(db){
   });
 }
 
+
+function

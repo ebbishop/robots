@@ -1,6 +1,8 @@
 var Sequelize = require('sequelize');
 
-var testDB = new Sequelize('testDB', 'postgres');
+var pgp = require('pg-promise')();
+// var testDB = pgp('postgres://postgres:1234@localhost:5432/testDB');
+var testDB = new Sequelize('postgres://localhost:5432/testDB', {});
 
 testDB.authenticate()
 .then(function(){
