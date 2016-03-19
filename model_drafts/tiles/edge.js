@@ -1,4 +1,4 @@
-var Sequelize = require('sequelize');
+hvar firebaseHelper = require('../../firebase');var Sequelize = require('sequelize');
 
 function Edge(db){
   var Edge = db.define('Edge', {
