@@ -3,7 +3,7 @@ var Sequelize = require('sequelize');
 function Robot (db) {
   var Robot = db.define('Robot', {
     name: Sequelize.STRING,
-    start: Sequelize.INTEGER,
+    dockNumber: Sequelize.INTEGER,
     damage: Sequelize.INTEGER,
     lives: Sequelize.INTEGER,
     flags: Sequelize.INTEGER,
@@ -15,6 +15,7 @@ function Robot (db) {
     prePlayCards: Sequelize.ARRAY(Sequelize.UUID), //array of cards available to be played prior to a turn
     registeredCard: Sequelize.ARRAY(Sequelize.UUID), //array of cards chosen
     ready: Sequelize.BOOLEAN, //toggled to on when ready for next turn
+    description: Sequelize.STRING
   });
 
   return Robot;
